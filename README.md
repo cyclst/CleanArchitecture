@@ -26,7 +26,7 @@ This project contains the concrete classes for implementing data storage using E
 
 ## Samples
 
-### [Todo Lists](https://github.com/cyclst/CleanArchitecture/tree/main/samples/TodoLists)
+### [Todo Lists](https://github.com/cyclst/CleanArchitecture/tree/master/samples/TodoLists)
 
 A small application providing basic todo list functionality using CQRS and Angular
 
