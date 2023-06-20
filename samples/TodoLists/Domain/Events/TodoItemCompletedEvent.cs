@@ -1,6 +1,6 @@
 ﻿namespace TodoLists.Domain.Events;
 
-public class TodoItemCompletedEvent : BaseEvent
+public record TodoItemCompletedEvent : BaseEvent
 {
     public TodoItemCompletedEvent(TodoItem item)
     {

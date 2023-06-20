@@ -1,8 +1,6 @@
-﻿using CleanArchitecture.Domain;
+﻿namespace TodoLists.Domain.ValueObjects;
 
-namespace TodoLists.Domain.ValueObjects;
-
-public class Colour : ValueObject
+public record Colour : ValueObject
 {
     static Colour()
     {
@@ -75,10 +73,5 @@ public class Colour : ValueObject
             yield return Purple;
             yield return Grey;
         }
-    }
-
-    protected override IEnumerable<object> GetEqualityComponents()
-    {
-        yield return Code;
     }
 }

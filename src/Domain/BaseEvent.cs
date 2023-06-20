@@ -2,6 +2,6 @@
 
 namespace CleanArchitecture.Domain;
 
-public abstract class BaseEvent : INotification
+public abstract record BaseEvent : INotification
 {
 }
