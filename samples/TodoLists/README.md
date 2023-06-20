@@ -1,14 +1,14 @@
-The goal of this template is to provide a straightforward and efficient approach to enterprise application development, leveraging the power of Clean Architecture and ASP.NET Core. Using this template, you can effortlessly create a Single Page App (SPA) with Angular and ASP.NET Core, while adhering to the principles of Clean Architecture. Getting started is easy - simply click **Use this template** above or install the **.NET template** (see below for full details).
+Getting started is easy - simply click **Use this template** above or install the **.NET template** (see below for full details).
 
 ## Technologies
 
-* [ASP.NET Core 7](https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core)
-* [Entity Framework Core 7](https://docs.microsoft.com/en-us/ef/core/)
-* [Angular 15](https://angular.io/)
-* [MediatR](https://github.com/jbogard/MediatR)
-* [AutoMapper](https://automapper.org/)
-* [FluentValidation](https://fluentvalidation.net/)
-* [NUnit](https://nunit.org/), [FluentAssertions](https://fluentassertions.com/), [Moq](https://github.com/moq) & [Respawn](https://github.com/jbogard/Respawn)
+- [ASP.NET Core 7](https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core)
+- [Entity Framework Core 7](https://docs.microsoft.com/en-us/ef/core/)
+- [Angular 15](https://angular.io/)
+- [MediatR](https://github.com/jbogard/MediatR)
+- [AutoMapper](https://automapper.org/)
+- [FluentValidation](https://fluentvalidation.net/)
+- [NUnit](https://nunit.org/), [FluentAssertions](https://fluentassertions.com/), [Moq](https://github.com/moq) & [Respawn](https://github.com/jbogard/Respawn)
 
 ## Getting Started
 
@@ -33,7 +33,7 @@ If you would like to use SQL Server, you will need to update **WebUI/appsettings
   "UseInMemoryDatabase": false,
 ```
 
-Verify that the **DefaultConnection** connection string within **appsettings.json** points to a valid SQL Server instance. 
+Verify that the **DefaultConnection** connection string within **appsettings.json** points to a valid SQL Server instance.
 
 When you run the application the database will be automatically created (if necessary) and the latest migrations will be applied.
 
@@ -42,13 +42,13 @@ When you run the application the database will be automatically created (if nece
 To use `dotnet-ef` for your migrations first ensure that "UseInMemoryDatabase" is disabled, as described within previous section.
 Then, add the following flags to your command (values assume you are executing from repository root)
 
-* `--project src/Infrastructure` (optional if in this folder)
-* `--startup-project src/WebUI`
-* `--output-dir Persistence/Migrations`
+- `--project src/Infrastructure` (optional if in this folder)
+- `--startup-project src/WebUI`
+- `--output-dir Persistence/Migrations`
 
 For example, to add a new migration from the root folder:
 
- `dotnet ef migrations add "SampleMigration" --project src\Infrastructure --startup-project src\WebUI --output-dir Persistence\Migrations`
+`dotnet ef migrations add "SampleMigration" --project src\Infrastructure --startup-project src\WebUI --output-dir Persistence\Migrations`
 
 ## Overview
 
@@ -66,12 +66,4 @@ This layer contains classes for accessing external resources such as file system
 
 ### WebUI
 
-This layer is a single page application based on Angular 14 and ASP.NET Core 7. This layer depends on both the Application and Infrastructure layers, however, the dependency on Infrastructure is only to support dependency injection. Therefore only *Startup.cs* should reference Infrastructure.
-
-## Support
-
-If you are having problems, please let us know by [raising a new issue](https://github.com/jasontaylordev/CleanArchitecture/issues/new/choose).
-
-## License
-
-This project is licensed with the [MIT license](LICENSE).
+This layer is a single page application based on Angular 14 and ASP.NET Core 7. This layer depends on both the Application and Infrastructure layers, however, the dependency on Infrastructure is only to support dependency injection. Therefore only _Startup.cs_ should reference Infrastructure.
