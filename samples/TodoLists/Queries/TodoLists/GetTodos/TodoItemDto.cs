@@ -1,10 +1,6 @@
-﻿using AutoMapper;
-using CleanArchitecture.Application.Mappings;
-using TodoLists.Domain.Entities;
+﻿namespace TodoLists.Queries.TodoLists.GetTodos;
 
-namespace TodoLists.Queries.TodoLists.GetTodos;
-
-public class TodoItemDto : IMapFrom<TodoItem>
+public class TodoItemDto
 {
     public int Id { get; init; }
 
@@ -17,10 +13,4 @@ public class TodoItemDto : IMapFrom<TodoItem>
     public int Priority { get; init; }
 
     public string? Note { get; init; }
-
-    public void Mapping(Profile profile)
-    {
-        profile.CreateMap<TodoItem, TodoItemDto>()
-            .ForMember(d => d.Priority, opt => opt.MapFrom(s => (int)s.Priority));
-    }
 }

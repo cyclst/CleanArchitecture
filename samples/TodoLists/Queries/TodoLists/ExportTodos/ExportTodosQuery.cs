@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using AutoMapper.QueryableExtensions;
+﻿using Mapster;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using TodoLists.Queries.TodoItems.GetTodoItemsWithPagination;
@@ -14,13 +13,11 @@ public record ExportTodosQuery : IRequest<ExportTodosVm>
 public class ExportTodosQueryHandler : IRequestHandler<ExportTodosQuery, ExportTodosVm>
 {
     private readonly ITodoListsDbContext _context;
-    private readonly IMapper _mapper;
     private readonly ICsvFileBuilder _fileBuilder;
 
-    public ExportTodosQueryHandler(ITodoListsDbContext context, IMapper mapper, ICsvFileBuilder fileBuilder)
+    public ExportTodosQueryHandler(ITodoListsDbContext context, ICsvFileBuilder fileBuilder)
     {
         _context = context;
-        _mapper = mapper;
         _fileBuilder = fileBuilder;
     }
 
@@ -28,7 +25,7 @@ public class ExportTodosQueryHandler : IRequestHandler<ExportTodosQuery, ExportT
     {
         var records = await _context.TodoItems
                 .Where(t => t.ListId == request.ListId)
-                .ProjectTo<TodoItemRecord>(_mapper.ConfigurationProvider)
+                .ProjectToType<TodoItemRecord>()
                 .ToListAsync(cancellationToken);
 
         var vm = new ExportTodosVm(

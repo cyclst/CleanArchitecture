@@ -1,31 +1,13 @@
 ﻿using System.Runtime.Serialization;
-using AutoMapper;
-using CleanArchitecture.Application.Mappings;
+using Mapster;
 using NUnit.Framework;
 using TodoLists.Domain.Entities;
-using TodoLists.Queries;
 using TodoLists.Queries.TodoLists.GetTodos;
 
 namespace TodoLists.Application.UnitTests.Common.Mappings;
 
 public class MappingTests
 {
-    private readonly IConfigurationProvider _configuration;
-    private readonly IMapper _mapper;
-
-    public MappingTests()
-    {
-        _configuration = new MapperConfiguration(config => 
-            config.AddProfile<MappingProfile>());
-
-        _mapper = _configuration.CreateMapper();
-    }
-
-    [Test]
-    public void ShouldHaveValidConfiguration()
-    {
-        _configuration.AssertConfigurationIsValid();
-    }
 
     [Test]
     [TestCase(typeof(TodoList), typeof(TodoListDto))]
@@ -34,7 +16,7 @@ public class MappingTests
     {
         var instance = GetInstanceOf(source);
 
-        _mapper.Map(instance, source, destination);
+        instance.Adapt(source, destination);
     }
 
     private object GetInstanceOf(Type type)
