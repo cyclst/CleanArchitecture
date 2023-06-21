@@ -33,8 +33,6 @@ public static class ConfigureServices
                     builder => builder.MigrationsAssembly(typeof(TodoListsDbContext).Assembly.FullName)));
         }
 
-        //services.AddScoped<ITodoListsDbContext>(provider => provider.GetRequiredService<TodoListsDbContext>());
-
         services.AddScoped<IDbContext>(provider => provider.GetRequiredService<TodoListsDbContext>());
 
         services.AddScoped<TodoListsDbContextInitialiser>();
