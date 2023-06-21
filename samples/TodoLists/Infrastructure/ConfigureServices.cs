@@ -1,5 +1,4 @@
-﻿using TodoLists.Infrastructure.Files;
-using Microsoft.AspNetCore.Authentication;
+﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -7,8 +6,6 @@ using TodoLists.Infrastructure.Persistence;
 using TodoLists.Infrastructure.Identity;
 using TodoLists.Application.Persistence;
 using TodoItems.Infrastructure.Persistence;
-using TodoLists.Queries;
-using TodoLists.Queries.TodoItems.GetTodoItemsWithPagination;
 using TodoLists.Infrastructure.Services;
 using TodoLists.Infrastructure.Persistence.Interceptors;
 using CleanArchitecture.EntityFramework;
@@ -36,7 +33,7 @@ public static class ConfigureServices
                     builder => builder.MigrationsAssembly(typeof(TodoListsDbContext).Assembly.FullName)));
         }
 
-        services.AddScoped<ITodoListsDbContext>(provider => provider.GetRequiredService<TodoListsDbContext>());
+        //services.AddScoped<ITodoListsDbContext>(provider => provider.GetRequiredService<TodoListsDbContext>());
 
         services.AddScoped<IDbContext>(provider => provider.GetRequiredService<TodoListsDbContext>());
 
@@ -46,7 +43,6 @@ public static class ConfigureServices
         services.AddScoped<ITodoListRepository, TodoListRepository>();
 
         services.AddTransient<IDateTime, DateTimeService>();
-        services.AddTransient<ICsvFileBuilder, CsvFileBuilder>();
 
         services.AddScoped<ICurrentUserService, CurrentUserService>();
         services.AddTransient<IIdentityService, IdentityService>();

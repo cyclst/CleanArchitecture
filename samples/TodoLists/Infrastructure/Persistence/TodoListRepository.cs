@@ -3,23 +3,21 @@ using TodoLists.Application.Persistence;
 using Microsoft.EntityFrameworkCore;
 using CleanArchitecture.Application.Persistence;
 using TodoLists.Domain.Entities;
-using TodoLists.Queries;
-using Azure.Core;
 using CleanArchitecture.Application.Exceptions;
 
 namespace TodoLists.Infrastructure.Persistence;
 public class TodoListRepository : ITodoListRepository
 {
-    protected ITodoListsDbContext Context;
+    protected TodoListsDbContext Context;
     public IUnitOfWork UnitOfWork { get; }
 
-    public TodoListRepository(ITodoListsDbContext context, IUnitOfWork unitOfWork)
+    public TodoListRepository(TodoListsDbContext context, IUnitOfWork unitOfWork)
     {
-        Context = context ?? throw new ArgumentNullException(nameof(context));
-        UnitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));
+        Context = context;
+        UnitOfWork = unitOfWork;
     }
 
-    public async Task<TodoList?> GetByIdAsync(int id)
+    public async Task<TodoList> GetByIdAsync(int id)
     {
         return await Context.TodoLists.FindAsync(id);
     }

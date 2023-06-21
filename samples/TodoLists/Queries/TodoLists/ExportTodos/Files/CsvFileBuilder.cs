@@ -1,10 +1,7 @@
 ﻿using System.Globalization;
-using TodoLists.Infrastructure.Files.Maps;
 using CsvHelper;
-using TodoLists.Queries.TodoItems.GetTodoItemsWithPagination;
-using TodoLists.Queries.TodoLists.ExportTodos;
 
-namespace TodoLists.Infrastructure.Files;
+namespace TodoLists.Queries.TodoLists.ExportTodos.Files;
 
 public class CsvFileBuilder : ICsvFileBuilder
 {

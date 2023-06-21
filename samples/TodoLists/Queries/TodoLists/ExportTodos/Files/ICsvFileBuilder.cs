@@ -1,6 +1,6 @@
 ﻿using TodoLists.Queries.TodoLists.ExportTodos;
 
-namespace TodoLists.Queries.TodoItems.GetTodoItemsWithPagination;
+namespace TodoLists.Queries.TodoLists.ExportTodos.Files;
 
 public interface ICsvFileBuilder
 {

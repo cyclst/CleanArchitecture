@@ -3,6 +3,7 @@ using TodoLists.Domain.Enums;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Mapster;
+using TodoLists.Infrastructure.Persistence;
 
 namespace TodoLists.Queries.TodoLists.GetTodos;
 
@@ -11,9 +12,9 @@ public record GetTodosQuery : IRequest<TodosVm>;
 
 public class GetTodosQueryHandler : IRequestHandler<GetTodosQuery, TodosVm>
 {
-    private readonly ITodoListsDbContext _context;
+    private readonly TodoListsDbContext _context;
 
-    public GetTodosQueryHandler(ITodoListsDbContext context)
+    public GetTodosQueryHandler(TodoListsDbContext context)
     {
         _context = context;
     }

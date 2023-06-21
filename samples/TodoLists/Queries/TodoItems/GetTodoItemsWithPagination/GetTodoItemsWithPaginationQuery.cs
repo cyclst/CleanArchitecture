@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using CleanArchitecture.EntityFramework;
 using Mapster;
+using TodoLists.Infrastructure.Persistence;
 
 namespace TodoLists.Queries.TodoItems.GetTodoItemsWithPagination;
 
@@ -13,9 +14,9 @@ public record GetTodoItemsWithPaginationQuery : IRequest<PaginatedList<TodoItemB
 
 public class GetTodoItemsWithPaginationQueryHandler : IRequestHandler<GetTodoItemsWithPaginationQuery, PaginatedList<TodoItemBriefDto>>
 {
-    private readonly ITodoListsDbContext _context;
+    private readonly TodoListsDbContext _context;
 
-    public GetTodoItemsWithPaginationQueryHandler(ITodoListsDbContext context)
+    public GetTodoItemsWithPaginationQueryHandler(TodoListsDbContext context)
     {
         _context = context;
     }

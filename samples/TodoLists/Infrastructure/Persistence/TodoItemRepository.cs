@@ -3,17 +3,16 @@ using TodoLists.Application.Persistence;
 using Microsoft.EntityFrameworkCore;
 using CleanArchitecture.Application.Persistence;
 using TodoLists.Domain.Entities;
-using TodoLists.Infrastructure.Persistence;
-using TodoLists.Queries;
 using CleanArchitecture.Application.Exceptions;
+using TodoLists.Infrastructure.Persistence;
 
 namespace TodoItems.Infrastructure.Persistence;
 public class TodoItemRepository : ITodoItemRepository
 {
-    protected ITodoListsDbContext Context;
+    protected TodoListsDbContext Context;
     public IUnitOfWork UnitOfWork { get; }
 
-    public TodoItemRepository(ITodoListsDbContext context, IUnitOfWork unitOfWork)
+    public TodoItemRepository(TodoListsDbContext context, IUnitOfWork unitOfWork)
     {
         Context = context ?? throw new ArgumentNullException(nameof(context));
         UnitOfWork = unitOfWork ?? throw new ArgumentNullException(nameof(unitOfWork));

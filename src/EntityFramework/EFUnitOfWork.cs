@@ -1,6 +1,5 @@
 ﻿using CleanArchitecture.Application.Persistence;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 
 namespace CleanArchitecture.EntityFramework;
 

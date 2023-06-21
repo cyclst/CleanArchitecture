@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using CleanArchitecture.Application.Persistence;
 using CleanArchitecture.EntityFramework;
 using Duende.IdentityServer.EntityFramework.Options;
 using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
@@ -8,11 +7,10 @@ using Microsoft.Extensions.Options;
 using TodoLists.Domain.Entities;
 using TodoLists.Infrastructure.Identity;
 using TodoLists.Infrastructure.Persistence.Interceptors;
-using TodoLists.Queries;
 
 namespace TodoLists.Infrastructure.Persistence;
 
-public class TodoListsDbContext : ApiAuthorizationDbContext<TodoListsUser>, ITodoListsDbContext, IDbContext
+public class TodoListsDbContext : ApiAuthorizationDbContext<TodoListsUser>, IDbContext
 {
     private readonly AuditableEntitySaveChangesInterceptor _auditableEntitySaveChangesInterceptor;
 

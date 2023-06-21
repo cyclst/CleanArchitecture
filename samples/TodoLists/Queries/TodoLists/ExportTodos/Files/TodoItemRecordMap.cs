@@ -1,8 +1,7 @@
 ﻿using System.Globalization;
-using TodoLists.Queries.TodoLists.ExportTodos;
 using CsvHelper.Configuration;
 
-namespace TodoLists.Infrastructure.Files.Maps;
+namespace TodoLists.Queries.TodoLists.ExportTodos.Files;
 
 public class TodoItemRecordMap : ClassMap<TodoItemRecord>
 {
