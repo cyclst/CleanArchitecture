@@ -27,8 +27,7 @@ jobs:
       - name: Generate a NuGet package
         run: dotnet pack --no-build -c Release -o .
 
-      - name: Prep packages
-        run: dotnet nuget add source --username cyclst --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/cyclst/index.json"
-
-      - name: Push Packages to GitHub.com
-        run: dotnet nuget push *.nupkg --api-key ${{ secrets.GITHUB_TOKEN }} -s "github"
+      - name: Publish to GitHub packages 
+        run: 
+          dotnet nuget add source https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json --name github --username ${{ github.repository_owner }} --password ${{ github.token }} --store-password-in-clear-text
+          dotnet nuget push **/*.nupkg --source github
