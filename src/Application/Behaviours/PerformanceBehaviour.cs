@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics;
-using CleanArchitecture.Application.Logging;
+using Cyclst.CleanArchitecture.Application.Logging;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
-namespace CleanArchitecture.Application.Behaviours;
+namespace Cyclst.CleanArchitecture.Application.Behaviours;
 
 public class PerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : notnull
 {

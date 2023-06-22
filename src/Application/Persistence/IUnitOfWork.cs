@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Application.Persistence;
+﻿namespace Cyclst.CleanArchitecture.Application.Persistence;
 
 public interface IUnitOfWork
 {

@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Domain;
+﻿using Cyclst.CleanArchitecture.Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace CleanArchitecture.EntityFramework;
+namespace Cyclst.CleanArchitecture.EntityFramework;
 
 public static class MediatorExtensions
 {

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace CleanArchitecture.Domain;
+namespace Cyclst.CleanArchitecture.Domain;
 
 public abstract class BaseEntity
 {

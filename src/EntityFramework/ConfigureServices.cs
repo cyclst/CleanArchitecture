@@ -1,5 +1,5 @@
-﻿using CleanArchitecture.EntityFramework;
-using CleanArchitecture.Application.Persistence;
+﻿using Cyclst.CleanArchitecture.EntityFramework;
+using Cyclst.CleanArchitecture.Application.Persistence;
 
 namespace Microsoft.Extensions.DependencyInjection;
 

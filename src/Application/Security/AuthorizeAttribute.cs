@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Application.Security;
+﻿namespace Cyclst.CleanArchitecture.Application.Security;
 
 /// <summary>
 /// Specifies the class this attribute is applied to requires authorization.

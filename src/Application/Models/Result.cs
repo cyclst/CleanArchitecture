@@ -1,4 +1,4 @@
-﻿namespace CleanArchitecture.Application.Models;
+﻿namespace Cyclst.CleanArchitecture.Application.Models;
 
 public class Result
 {

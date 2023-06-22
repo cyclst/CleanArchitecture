@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace CleanArchitecture.EntityFramework;
+namespace Cyclst.CleanArchitecture.EntityFramework;
 public class PaginatedList<T>
 {
     public IReadOnlyCollection<T> Items { get; }

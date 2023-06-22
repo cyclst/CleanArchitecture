@@ -1,8 +1,8 @@
-﻿using CleanArchitecture.Application.Logging;
+﻿using Cyclst.CleanArchitecture.Application.Logging;
 using MediatR.Pipeline;
 using Microsoft.Extensions.Logging;
 
-namespace CleanArchitecture.Application.Behaviours;
+namespace Cyclst.CleanArchitecture.Application.Behaviours;
 
 public class LoggingBehaviour<TRequest> : IRequestPreProcessor<TRequest> where TRequest : notnull
 {

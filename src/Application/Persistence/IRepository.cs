@@ -1,7 +1,7 @@
 ﻿using System.Linq.Expressions;
-using CleanArchitecture.Domain;
+using Cyclst.CleanArchitecture.Domain;
 
-namespace CleanArchitecture.Application.Persistence;
+namespace Cyclst.CleanArchitecture.Application.Persistence;
 
 public interface IRepository<T> where T : BaseEntity
 {

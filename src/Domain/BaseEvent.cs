@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace CleanArchitecture.Domain;
+namespace Cyclst.CleanArchitecture.Domain;
 
 public abstract record BaseEvent : INotification
 {

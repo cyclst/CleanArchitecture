@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace CleanArchitecture.Application.Logging;
+namespace Cyclst.CleanArchitecture.Application.Logging;
 
 public class LogDetailsService : ILogDetailsService
 {

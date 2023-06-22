@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
 
-namespace CleanArchitecture.EntityFramework;
+namespace Cyclst.CleanArchitecture.EntityFramework;
 
 public interface IDbContext
 {

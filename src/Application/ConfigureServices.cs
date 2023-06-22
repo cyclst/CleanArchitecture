@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
-using CleanArchitecture.Application.Behaviours;
-using CleanArchitecture.Application.Logging;
+using Cyclst.CleanArchitecture.Application.Behaviours;
+using Cyclst.CleanArchitecture.Application.Logging;
 using FluentValidation;
 using MediatR;
 using MediatR.Pipeline;

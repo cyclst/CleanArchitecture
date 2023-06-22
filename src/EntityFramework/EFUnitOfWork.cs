@@ -1,7 +1,7 @@
-﻿using CleanArchitecture.Application.Persistence;
+﻿using Cyclst.CleanArchitecture.Application.Persistence;
 using MediatR;
 
-namespace CleanArchitecture.EntityFramework;
+namespace Cyclst.CleanArchitecture.EntityFramework;
 
 public class EFUnitOfWork : IUnitOfWork
 {

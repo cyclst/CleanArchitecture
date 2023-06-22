@@ -1,8 +1,8 @@
 ﻿using FluentValidation;
 using MediatR;
-using ValidationException = CleanArchitecture.Application.Exceptions.ValidationException;
+using ValidationException = Cyclst.CleanArchitecture.Application.Exceptions.ValidationException;
 
-namespace CleanArchitecture.Application.Behaviours;
+namespace Cyclst.CleanArchitecture.Application.Behaviours;
 
 public class ValidationBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
      where TRequest : notnull
