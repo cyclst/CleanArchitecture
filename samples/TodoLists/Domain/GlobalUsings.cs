@@ -1,4 +1,4 @@
-﻿global using CleanArchitecture.Domain;
+﻿global using Cyclst.CleanArchitecture.Domain;
 global using TodoLists.Domain.Entities;
 global using TodoLists.Domain.Enums;
 global using TodoLists.Domain.Events;

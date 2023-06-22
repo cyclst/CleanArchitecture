@@ -17,7 +17,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\..\src\EntityFramework\CleanArchitecture.EntityFramework.csproj" />
+        <ProjectReference Include="..\..\..\src\EntityFramework\Cyclst.CleanArchitecture.EntityFramework.csproj" />
         <ProjectReference Include="..\Application\TodoLists.Application.csproj" />
     </ItemGroup>
 

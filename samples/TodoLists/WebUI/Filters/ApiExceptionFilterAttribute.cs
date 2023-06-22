@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Application.Exceptions;
+﻿using Cyclst.CleanArchitecture.Application.Exceptions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using TodoLists.Infrastructure.Identity;

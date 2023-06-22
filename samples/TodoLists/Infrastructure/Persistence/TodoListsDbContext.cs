@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using CleanArchitecture.EntityFramework;
+using Cyclst.CleanArchitecture.EntityFramework;
 using Duende.IdentityServer.EntityFramework.Options;
 using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;

@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Application.Exceptions;
+﻿using Cyclst.CleanArchitecture.Application.Exceptions;
 using FluentAssertions;
 using FluentValidation.Results;
 using NUnit.Framework;

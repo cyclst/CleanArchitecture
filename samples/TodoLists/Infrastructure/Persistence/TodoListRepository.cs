@@ -1,9 +1,9 @@
 ﻿using System.Linq.Expressions;
 using TodoLists.Application.Persistence;
 using Microsoft.EntityFrameworkCore;
-using CleanArchitecture.Application.Persistence;
+using Cyclst.CleanArchitecture.Application.Persistence;
 using TodoLists.Domain.Entities;
-using CleanArchitecture.Application.Exceptions;
+using Cyclst.CleanArchitecture.Application.Exceptions;
 
 namespace TodoLists.Infrastructure.Persistence;
 public class TodoListRepository : ITodoListRepository

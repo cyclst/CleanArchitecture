@@ -8,7 +8,7 @@ using TodoLists.Application.Persistence;
 using TodoItems.Infrastructure.Persistence;
 using TodoLists.Infrastructure.Services;
 using TodoLists.Infrastructure.Persistence.Interceptors;
-using CleanArchitecture.EntityFramework;
+using Cyclst.CleanArchitecture.EntityFramework;
 using MediatR;
 using System.Reflection;
 using TodoLists.Infrastructure.Identity.Behaviours;

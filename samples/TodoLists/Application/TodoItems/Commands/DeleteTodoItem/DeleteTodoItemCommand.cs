@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Application.Exceptions;
+﻿using Cyclst.CleanArchitecture.Application.Exceptions;
 using TodoLists.Domain.Entities;
 using TodoLists.Domain.Events;
 using MediatR;

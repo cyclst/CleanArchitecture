@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using CleanArchitecture.EntityFramework;
+using Cyclst.CleanArchitecture.EntityFramework;
 using Mapster;
 using TodoLists.Infrastructure.Persistence;
 

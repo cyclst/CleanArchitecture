@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Application.Persistence;
+﻿using Cyclst.CleanArchitecture.Application.Persistence;
 using TodoLists.Domain.Entities;
 
 namespace TodoLists.Application.Persistence;

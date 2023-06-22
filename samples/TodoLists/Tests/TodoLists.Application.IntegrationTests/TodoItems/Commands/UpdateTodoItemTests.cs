@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Application.Exceptions;
+﻿using Cyclst.CleanArchitecture.Application.Exceptions;
 using FluentAssertions;
 using NUnit.Framework;
 using TodoLists.Application.TodoItems.Commands.CreateTodoItem;

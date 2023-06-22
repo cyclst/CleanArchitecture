@@ -21,7 +21,7 @@ namespace TodoLists.Infrastructure.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("CleanArchitecture.Domain.Entities.TodoItem", b =>
+            modelBuilder.Entity("Cyclst.CleanArchitecture.Domain.Entities.TodoItem", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -68,7 +68,7 @@ namespace TodoLists.Infrastructure.Persistence.Migrations
                     b.ToTable("TodoItems");
                 });
 
-            modelBuilder.Entity("CleanArchitecture.Domain.Entities.TodoList", b =>
+            modelBuilder.Entity("Cyclst.CleanArchitecture.Domain.Entities.TodoList", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -441,9 +441,9 @@ namespace TodoLists.Infrastructure.Persistence.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("CleanArchitecture.Domain.Entities.TodoItem", b =>
+            modelBuilder.Entity("Cyclst.CleanArchitecture.Domain.Entities.TodoItem", b =>
                 {
-                    b.HasOne("CleanArchitecture.Domain.Entities.TodoList", "List")
+                    b.HasOne("Cyclst.CleanArchitecture.Domain.Entities.TodoList", "List")
                         .WithMany("Items")
                         .HasForeignKey("ListId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -452,9 +452,9 @@ namespace TodoLists.Infrastructure.Persistence.Migrations
                     b.Navigation("List");
                 });
 
-            modelBuilder.Entity("CleanArchitecture.Domain.Entities.TodoList", b =>
+            modelBuilder.Entity("Cyclst.CleanArchitecture.Domain.Entities.TodoList", b =>
                 {
-                    b.OwnsOne("CleanArchitecture.Domain.ValueObjects.Colour", "Colour", b1 =>
+                    b.OwnsOne("Cyclst.CleanArchitecture.Domain.ValueObjects.Colour", "Colour", b1 =>
                         {
                             b1.Property<int>("TodoListId")
                                 .HasColumnType("int");
@@ -526,7 +526,7 @@ namespace TodoLists.Infrastructure.Persistence.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("CleanArchitecture.Domain.Entities.TodoList", b =>
+            modelBuilder.Entity("Cyclst.CleanArchitecture.Domain.Entities.TodoList", b =>
                 {
                     b.Navigation("Items");
                 });

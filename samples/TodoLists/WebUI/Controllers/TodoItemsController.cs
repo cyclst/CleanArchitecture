@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using CleanArchitecture.EntityFramework;
+using Cyclst.CleanArchitecture.EntityFramework;
 using TodoLists.Queries.TodoItems.GetTodoItemsWithPagination;
 using TodoLists.Application.TodoItems.Commands.CreateTodoItem;
 using TodoLists.Application.TodoItems.Commands.UpdateTodoItem;

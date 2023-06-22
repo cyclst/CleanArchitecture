@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Application.Models;
+﻿using Cyclst.CleanArchitecture.Application.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

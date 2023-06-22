@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Application.Models;
+﻿using Cyclst.CleanArchitecture.Application.Models;
 
 namespace TodoLists.Infrastructure.Identity;
 public interface IIdentityService

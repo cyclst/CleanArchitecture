@@ -14,7 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\..\src\Application\CleanArchitecture.Application.csproj" />
+        <ProjectReference Include="..\..\..\src\Application\Cyclst.CleanArchitecture.Application.csproj" />
         <ProjectReference Include="..\Domain\TodoLists.Domain.csproj" />
     </ItemGroup>
 

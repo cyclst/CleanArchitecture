@@ -1,4 +1,4 @@
-﻿using CleanArchitecture.Application.Logging;
+﻿using Cyclst.CleanArchitecture.Application.Logging;
 using MediatR;
 
 namespace TodoLists.Infrastructure.Identity;
