@@ -4,7 +4,7 @@ namespace CleanArchitecture.Domain;
 
 public abstract class BaseEntity
 {
-    public int Id { get; set; }
+    public int Id { get; private set; }
 
     private readonly List<BaseEvent> _domainEvents = new();
 
